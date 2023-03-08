@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import Welcome from './Welcome';
-//import { render } from '@testing-library/react';
+import Fcomponent from './Fcomponent';
+import { Mytfunc } from './Fcomponent';
+import States from './States';
 
 const styling ={
   textAlign: "center"
 }
-
 class Myapp extends React.Component{
   render (){
     return (
@@ -19,20 +20,17 @@ class Myapp extends React.Component{
   }
 }
 
-function Mysapp(props){
-  return (<h1>This is {props.name} from functional component</h1>)
-}
-
-let Mytfunc = (props) => <h1>This is {props.name} from arrow function component</h1>
-
 function App() {
   return (
     <div style={styling}>
     <Myapp name = "Bilal Qureshi">
       <p>This is class component child paragraph</p>
     </Myapp>
-    <Mysapp name = "Bilal"/>
-    <Mytfunc name = "Bilal Ahmad"/>
+    <States/>
+    <Fcomponent name = "Bilal"/>
+    <Mytfunc name = "Bilal Ahmad"/>   
+    
+    
     <Welcome name = "Bilal"
       contact = "0000"
     />
