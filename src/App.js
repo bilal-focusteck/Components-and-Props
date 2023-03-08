@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Fcomponent from './Fcomponent';
 import { Mytfunc } from './Fcomponent';
 import States from './States';
+import Mycomponent from './Components/Mycomponent';
 
 const styling ={
   textAlign: "center"
@@ -12,6 +13,11 @@ class Myapp extends React.Component{
   render (){
     return (
       <React.Fragment>
+        <Mycomponent
+        name="Bilal"
+        message="Hello World One"
+      />
+        
         <h1>Hello My name is {this.props.name} from Class Component</h1>
         {this.props.children}
       </React.Fragment> 
